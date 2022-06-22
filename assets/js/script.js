@@ -10,14 +10,16 @@ const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-"
 let passwordArray = [];
 var upper
 var lower
+let randomPassword = "";
 // Write password to the #password input
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+    var randomPassword = generatePassword();
+    var randomPassword = document.querySelector("#password");
+  
+    randomPassword.value = randomPassword;
+  
+  }
 
-    passwordText.value = password;
-
-}
 //PSEUDO CODE
 
 //Click button to generate password
@@ -34,45 +36,57 @@ function generatePassword() {
     if (upper === true) {
         passwordArray = passwordArray.concat(uppercase);
         console.log(passwordArray);
-    let lower = confirm("Would you like for your password to have lowercase letters?");
-      if (upper === true) {
-        passwordArray = passwordArray.concat(lowercase)
-        console.log(passwordArray)
-      }
+        for(var i=0; i <= passwordLength; i++) {
+            let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
+            console.log(random);
+            let randomPassword = randomPassword.concat(random);
+            console.log(randomPassword);  //randomPassword is the password I want to show on the html!
+          }
+        let lower = confirm("Would you like for your password to have lowercase letters?");
+        if (upper === true) {
+            passwordArray = passwordArray.concat(lowercase)
+            console.log(passwordArray)
+        }
 
-      let numb = confirm("Would you like for your password to have numbers?")    ;
-      if (numb === true) {
-        passwordArray = passwordArray.concat(numbers);
-        console.log(passwordArray);
-      }
-}
+        let numb = confirm("Would you like for your password to have numbers?");
+        if (numb === true) {
+            passwordArray = passwordArray.concat(numbers);
+            console.log(passwordArray);
+        }
+        let spec = confirm("Would you like for your password to have special characters?");
+        if (spec === true) {
+            passwordArray = passwordArray.concat(special);
+            console.log(passwordArray);
+        }
+    }
 
-generatePassword();
+// generatePassword();
+writePassword();
 
-//generatePassword function will begin.
+    //generatePassword function will begin.
 
-//Prompts will display using prompt().  Responses will be stored in object called userResponses
+    //Prompts will display using prompt().  Responses will be stored in object called userResponses
 
-//Prompt #1 = How many characters would you like for your password to have?  Must have a minimum of 8 and a maximum of 128.
-//variable = passwordLength
+    //Prompt #1 = How many characters would you like for your password to have?  Must have a minimum of 8 and a maximum of 128.
+    //variable = passwordLength
 
-//Prompt #2 = Would you like for your password to have uppercase letters?
-//array uppercase = [A, B, C, D, ... X, Y, Z]
-//if yes, concat with array password = []
+    //Prompt #2 = Would you like for your password to have uppercase letters?
+    //array uppercase = [A, B, C, D, ... X, Y, Z]
+    //if yes, concat with array password = []
 
-//Prompt #3 = Would you like for your password to have lowercase letters?
-//array lowercase = [a, b, c, d, ... x, y, z]
-//if yes, concat with array password = []
+    //Prompt #3 = Would you like for your password to have lowercase letters?
+    //array lowercase = [a, b, c, d, ... x, y, z]
+    //if yes, concat with array password = []
 
-//Prompt #4 = Would you like for your password to have numbers?
-//array numbers = [1, 2, 3, 4 ... 8, 9, 0]
-//if yes, concat with array password = []
+    //Prompt #4 = Would you like for your password to have numbers?
+    //array numbers = [1, 2, 3, 4 ... 8, 9, 0]
+    //if yes, concat with array password = []
 
-//Prompt #5 = Would you like for your password to have special characters?
-//array special = [!, ", #, $, %, &, ', ( ... +, -, ^]
-//if yes, concat with array password = []
+    //Prompt #5 = Would you like for your password to have special characters?
+    //array special = [!, ", #, $, %, &, ', ( ... +, -, ^]
+    //if yes, concat with array password = []
 
-//use to loop to pull a single character from array password "i" or "passwordLength" times.
-//ensure that every pull is random using math.random().
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+    //use to loop to pull a single character from array password "i" or "passwordLength" times.
+    //ensure that every pull is random using math.random().
+    // Add event listener to generate button
+ // generateBtn.addEventListener("click", writePassword);
