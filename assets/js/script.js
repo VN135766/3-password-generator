@@ -11,12 +11,13 @@ let passwordArray = [];
 var upper
 var lower
 let randomPassword = "";
+generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
-    var randomPassword = generatePassword();
-    var randomPassword = document.querySelector("#password");
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
   
-    randomPassword.value = randomPassword;
+    passwordText.value = password;
   
   }
 
@@ -38,10 +39,11 @@ function generatePassword() {
         console.log(passwordArray);
         for(var i=0; i <= passwordLength; i++) {
             let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
-            console.log(random);
-            let randomPassword = randomPassword.concat(random);
-            console.log(randomPassword);  //randomPassword is the password I want to show on the html!
+            console.log("pass array pull is " + random);
+            randomPassword = randomPassword.concat(random);
+            console.log("random password is " + randomPassword);  //randomPassword is the password I want to show on the html!
           }
+          return randomPassword
         let lower = confirm("Would you like for your password to have lowercase letters?");
         if (upper === true) {
             passwordArray = passwordArray.concat(lowercase)
@@ -60,8 +62,8 @@ function generatePassword() {
         }
     }
 
-// generatePassword();
-writePassword();
+    generatePassword();
+    // writePassword();
 
     //generatePassword function will begin.
 
