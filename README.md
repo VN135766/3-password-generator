@@ -15,14 +15,13 @@
   This project is not licensed.
   
 ## Links
-<br>
 [Link to deployed application](https://vn135766.github.io/3-password-generator/)
-<br>
+
+
 [Link to Github Repo](https://github.com/VN135766/3-password-generator)
-<br>
 
 ## Screenshot of Webpage
-![Alt text](https://github.com/VN135766/Challenege-4---Quiz/blob/main/Screenshot%20(33).png)
+![Alt text](https://github.com/VN135766/3-password-generator/blob/main/assets/images/Screenshot%20(52).png)
 ## Questions
   If you have any questions, please contact me via:
 <br>
