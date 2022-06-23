@@ -1,12 +1,10 @@
 # Random Password Generator
   
 ## Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Project Goal](#project)
 - [License](#license)
-- [Contribution](#contribution)
-- [Tests](#tests)
+- [Links](#links)
+- [Screenshot](#screenshot)
 - [Questions](#questions)
 ## Project Goal
   To create an application, utilizing JavaScript fundamentals, that enables the user to generate a random password based off specific parameters they select (i.e. password length and character type). This application will run in Google Chrome and has an user-interface that is responsive to multiple screen-sizes.
@@ -20,7 +18,7 @@
 
 [Link to Github Repo](https://github.com/VN135766/3-password-generator)
 
-## Screenshot of Webpage
+## Screenshot
 ![Alt text](https://github.com/VN135766/3-password-generator/blob/main/assets/images/Screenshot%20(52).png)
 ## Questions
   If you have any questions, please contact me via:
